@@ -7,6 +7,7 @@ const Destination = () => {
   const myStyle = {
     backgroundImage: `url(${backgroundM})`,
     backgroundSize: "cover",
+    minHeight: "100vh",
   };
 
   return (

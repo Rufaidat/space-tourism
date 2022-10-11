@@ -4,6 +4,7 @@ const Home = () => {
   const styleM = {
     backgroundImage: `url(${backgroundM})`,
     backgroundSize: "cover",
+    minHeight: "100vh",
   };
   return (
     <div style={styleM}>
@@ -14,8 +15,10 @@ const Home = () => {
           textAlign: "center",
           paddingBottom: "6rem",
           alignItems: "center",
+          justifyContent: "center",
           display: "flex",
           flexDirection: "column",
+          height: "90vh",
         }}
       >
         <p className="p-style">SO, YOU WANT TO TRAVEL TO</p>

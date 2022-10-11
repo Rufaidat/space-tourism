@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Destination from "./components/Destination";
 import DestinationModel from "./components/DestinationModel";
 import Crew from "./components/Crew";
+import Technology from "./components/Technology";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             element={<DestinationModel />}
           ></Route>
           <Route path="/crew" element={<Crew />}></Route>
+          <Route path="/technology" element={<Technology />}></Route>
         </Routes>
       </Router>
     </div>

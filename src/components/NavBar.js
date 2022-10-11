@@ -1,10 +1,10 @@
 import { useState } from "react";
-// import { SwipeableDrawer, useMediaQuery } from "@mui/material";
 import logo from "../images/shared/logo.svg";
 import harmburger from "../images/shared/icon-hamburger.svg";
 import close from "../images/shared/icon-close.svg";
 import { SwipeableDrawer } from "@mui/material";
-import { BrowserRouter as Routes, Route, Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   const [show, setShow] = useState(true);
   const handleClick = () => {
@@ -34,7 +34,7 @@ const NavBar = () => {
             onClick={handleClick}
           />
         ) : (
-          <SwipeableDrawer open={true} anchor="right" className="swipe">
+          <div open={true} anchor="right" className="swipe">
             <img
               src={close}
               onClick={handleClick}
@@ -48,7 +48,7 @@ const NavBar = () => {
               }}
             />
 
-            <Link className="link" style={{ marginTop: "5rem" }}>
+            <Link className="link" style={{ marginTop: "7rem" }}>
               <strong className="strong" to="/">
                 00
               </strong>{" "}
@@ -63,7 +63,7 @@ const NavBar = () => {
             <Link className="link" to="/technology">
               <strong className="strong">03</strong> TECHNOLOGY
             </Link>
-          </SwipeableDrawer>
+          </div>
         )}
       </div>
     );

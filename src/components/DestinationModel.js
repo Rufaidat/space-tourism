@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import backgroundM from "../images/destination/background-destination-mobile.jpg";
 import NavBar from "./NavBar";
+import { useState } from "react";
 const data = [
   {
     img: `${moon}`,
@@ -37,12 +38,12 @@ const data = [
   },
 ];
 const DestinationModel = () => {
-  let render = data[0];
   const planet = useParams().planet;
-  render = data.find((n) => n.planet === planet);
+  const render = data.find((n) => n.planet === planet);
   const myStyle = {
     backgroundImage: `url(${backgroundM})`,
     backgroundSize: "cover",
+    minHeight: "100vh",
   };
   return (
     <div style={myStyle}>

@@ -13,9 +13,9 @@ h1 {
 p {
   font-family: "Barlow Condensed", sans-serif;
   color: #d0d6f9;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 25px;
-  width: 80%;
+  width: 83%;
 }
 h3 {
   font-family: "Bellefair", serif;
@@ -31,6 +31,7 @@ h4 {
   font-size: 16px;
   font-weight: lighter;
   opacity: 0.5;
+  line-height: 18px;
 }
 .p-style {
   color: #d0d6f9;
@@ -55,13 +56,31 @@ h4 {
 }
 .strong {
   margin: 0 0.75rem;
+  color: #ffffff;
+  opacity: 0.25;
 }
 .swipe {
-  /* 
-  height: 667px; */
-  width: 254px;
-  background: rgba(255 255 255 0.04);
-  /* backdrop-filter: blur(40.7742px); */
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  z-index: 1;
+}
+.swipe .link {
+  color: #ffffff;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  margin: 3rem 2rem;
+}
+.swipe .link .strong {
+  opacity: 1;
 }
 .destinaion-links {
   margin: 1rem;
@@ -87,14 +106,34 @@ span {
 .circle-box {
   display: flex;
   justify-content: space-between;
-  width: 5.5rem;
-  height: 0.8rem;
-  margin: 1rem;
+  margin: 1rem 0 2rem;
+  cursor: pointer;
 }
-.box {
-  width: 0.625rem;
-  height: 0.625rem;
-  background-color: #ffffff;
+.box,
+.active-box {
+  font-size: 1.5rem;
+  color: #ffffff;
   opacity: 0.17;
+  margin: 0 0.5rem;
+}
+.active-box {
+  opacity: 1;
+}
+.tech-box,
+.active-tech-box {
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
+  border: 1px solid #d0d6f9;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  font-family: "Bellefair", serif;
+}
+.active-tech-box {
+  background-color: #ffffff;
+  color: #0b0d17;
+  border: 1px solid #ffffff;
 }

@@ -1,43 +1,10 @@
-import moon from "../images/destination/image-moon.webp";
-import europa from "../images/destination/image-europa.webp";
-import mars from "../images/destination/image-mars.webp";
-import titan from "../images/destination/image-titan.webp";
+import { data } from "../data";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import backgroundM from "../images/destination/background-destination-mobile.jpg";
-import NavBar from "./NavBar";
-import { useState } from "react";
-const data = [
-  {
-    img: `${moon}`,
-    planet: "moon",
-    text: "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
-    avg: " 384,400 km",
-    time: "3 days",
-  },
-  {
-    img: `${mars}`,
-    planet: "mars",
-    text: " Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
-    avg: " 225 mil. km",
-    time: "9 months",
-  },
-  {
-    img: `${europa}`,
-    planet: "europa",
-    text: "  The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
-    avg: " 628 mil. km",
-    time: "3 years",
-  },
-  {
-    img: `${titan}`,
-    planet: "titan",
-    text: " The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
-    avg: "1.6 bil. km",
-    time: "7 years",
-  },
-];
-const DestinationModel = () => {
+import backgroundM from "../../../images/destination/background-destination-mobile.jpg";
+import NavBar from "../../navbar/NavBarMobile";
+
+const DestinationMobileModel = () => {
   const planet = useParams().planet;
   const render = data.find((n) => n.planet === planet);
   const myStyle = {
@@ -67,7 +34,7 @@ const DestinationModel = () => {
           style={{ width: "10rem", height: "10rem", margin: "2rem" }}
         />
         <div>
-          <Link className="destinaion-links p-style" to="/destination/">
+          <Link className={"destinaion-links p-style"} to="/destination/">
             MOON
           </Link>
           <Link className="destinaion-links p-style" to="/destination/mars">
@@ -110,4 +77,4 @@ const DestinationModel = () => {
     </div>
   );
 };
-export default DestinationModel;
+export default DestinationMobileModel;

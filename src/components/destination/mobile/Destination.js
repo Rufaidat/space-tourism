@@ -1,9 +1,9 @@
-import backgroundM from "../images/destination/background-destination-mobile.jpg";
-import NavBar from "./NavBar";
-import moon from "../images/destination/image-moon.webp";
+import backgroundM from "../../../images/destination/background-destination-mobile.jpg";
+import NavBar from "../../navbar/NavBarMobile";
+import moon from "../../../images/destination/image-moon.webp";
 import { Link } from "react-router-dom";
 
-const Destination = () => {
+const DestinationMobile = () => {
   const myStyle = {
     backgroundImage: `url(${backgroundM})`,
     backgroundSize: "cover",
@@ -32,7 +32,11 @@ const Destination = () => {
           style={{ width: "10rem", height: "10rem", margin: "2rem" }}
         />
         <div>
-          <Link className="destinaion-links p-style" to="/destination/">
+          <Link
+            className="destinaion-links p-style"
+            to="/destination/"
+            style={{ borderBottom: "2px solid white" }}
+          >
             MOON
           </Link>
           <Link className="destinaion-links p-style" to="/destination/mars">
@@ -66,4 +70,4 @@ const Destination = () => {
   );
 };
 
-export default Destination;
+export default DestinationMobile;

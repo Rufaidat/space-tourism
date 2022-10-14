@@ -35,11 +35,30 @@ h4 {
 }
 .p-style {
   color: #d0d6f9;
-  margin: 1rem 1rem 1rem;
+  margin: 2rem 1rem 1rem;
   font-size: 15px;
   line-height: 19.2px;
   font-weight: 400;
   letter-spacing: 2.7px;
+}
+.explore-div {
+  border-radius: 50%;
+  background: white;
+  color: #0b0d17;
+  width: 7rem;
+  height: 7rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.explore-div p {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #0b0d17;
+  letter-spacing: 1.25px;
+  line-height: 23px;
 }
 .link {
   text-decoration: none;
@@ -51,9 +70,11 @@ h4 {
   line-height: 19px;
   letter-spacing: 2.7px;
   /* color: #ffffff; */
+  padding-bottom: 2.9rem;
   color: black;
   margin: 1rem 2rem;
 }
+
 .strong {
   margin: 0 0.75rem;
   color: #ffffff;
@@ -97,6 +118,12 @@ h4 {
 .destinaion-links:active {
   border-bottom: 2px solid white;
 }
+.bottom {
+  border-bottom: 2px solid white;
+}
+#pick-des {
+  margin: 0;
+}
 span {
   width: 100%;
   height: 1px;
@@ -136,4 +163,88 @@ span {
   background-color: #ffffff;
   color: #0b0d17;
   border: 1px solid #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .swipe .link {
+    margin: 2rem 1rem;
+  }
+  .swipe .strong {
+    display: none;
+  }
+  .swipe {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+  .p-style {
+    font-size: 20px;
+    margin: 3rem 1.5rem 1rem;
+  }
+  p {
+    width: 28.7rem;
+    line-height: 28px;
+  }
+  .explore-div {
+    width: 12rem;
+    height: 12rem;
+    padding: 0rem;
+  }
+  .explore-div p {
+    font-size: 2rem;
+  }
+  .link:hover {
+    border-bottom: 2px solid #ffffff;
+  }
+  .active {
+    border-bottom: 2px solid #ffffff;
+  }
+  .dis-box {
+    display: flex;
+    flex-direction: row;
+    width: 30rem;
+    justify-content: center;
+  }
+  .dis-box .p-style {
+    margin: 0 0 0.5rem;
+  }
+  .dis-box:first-child {
+    margin-left: 5rem;
+  }
+  .dis-box div {
+    width: 50%;
+  }
+  .dis-box div p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .pick-des {
+    margin: 2.5rem 0 3.75rem -28rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    line-height: 27.5px;
+    margin: 2.5rem 0 0.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+    line-height: 46px;
+  }
+  .circle-box {
+    margin: 1.5rem 0 2rem;
+  }
+  .tech-box,
+  .active-tech-box {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1.5rem 0.5rem;
+  }
+  .active-tech-box {
+    border: 1px solid #ffffff;
+  }
 }

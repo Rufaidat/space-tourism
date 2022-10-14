@@ -1,14 +1,10 @@
-// import { div } from "@mui/material";
 import "./App.css";
-import Home from "./components/Home";
-
-import styled from "styled-components";
-import NavBar from "./components/NavBar";
+import Home from "./components/home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Destination from "./components/Destination";
-import DestinationModel from "./components/DestinationModel";
-import Crew from "./components/Crew";
-import Technology from "./components/Technology";
+import Destination from "./components/destination/DestinationMain";
+import DestinationModel from "./components/destination/MainDM";
+import Crew from "./components/crew/MainCrew";
+import Technology from "./components/technology/TechnologyMain";
 
 const App = () => {
   return (

@@ -1,11 +1,10 @@
 import { useState } from "react";
-import logo from "../images/shared/logo.svg";
-import harmburger from "../images/shared/icon-hamburger.svg";
-import close from "../images/shared/icon-close.svg";
-import { SwipeableDrawer } from "@mui/material";
+import logo from "../../images/shared/logo.svg";
+import harmburger from "../../images/shared/icon-hamburger.svg";
+import close from "../../images/shared/icon-close.svg";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBarMobile = () => {
   const [show, setShow] = useState(true);
   const handleClick = () => {
     setShow(show ? false : true);
@@ -48,11 +47,8 @@ const NavBar = () => {
               }}
             />
 
-            <Link className="link" style={{ marginTop: "7rem" }}>
-              <strong className="strong" to="/">
-                00
-              </strong>{" "}
-              HOME
+            <Link className="link" style={{ marginTop: "7rem" }} to="/">
+              <strong className="strong">00</strong> HOME
             </Link>
             <Link className="link" to="/destination">
               <strong className="strong">01</strong> DESTINATION
@@ -75,4 +71,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBarMobile;

@@ -1,13 +1,23 @@
-import backgroundM from "../images/home/background-home-mobile.jpg";
-import NavBar from "./NavBar";
-const Home = () => {
+import backgroundM from "../../images/home/background-home-mobile.jpg";
+import bgTab from "../../images/home/background-home-tablet.jpg";
+import NavBar from "../navbar/MainNavBar";
+import { useMediaQuery } from "@mui/material";
+
+const HomeMobile = () => {
+  const mobileQuery = useMediaQuery("(min-width:768px)");
+  const tabQuery = useMediaQuery("(min-width:1440px)");
   const styleM = {
     backgroundImage: `url(${backgroundM})`,
     backgroundSize: "cover",
     minHeight: "100vh",
   };
+  const styleTab = {
+    backgroundImage: `url(${bgTab})`,
+    backgroundSize: "cover",
+    minHeight: "100vh",
+  };
   return (
-    <div style={styleM}>
+    <div style={!mobileQuery ? styleM : !tabQuery ? styleTab : null}>
       <NavBar />
       <div
         style={{
@@ -23,10 +33,19 @@ const Home = () => {
       >
         <p className="p-style">SO, YOU WANT TO TRAVEL TO</p>
         <h1
-          style={{
-            fontSize: "5rem",
-            margin: " 2rem 0 1rem",
-          }}
+          style={
+            !mobileQuery
+              ? {
+                  fontSize: "5rem",
+                  margin: " 2rem 0 1rem",
+                }
+              : !tabQuery
+              ? {
+                  fontSize: "9rem",
+                  margin: " 2rem 0 1rem",
+                }
+              : ""
+          }
         >
           SPACE
         </h1>
@@ -45,34 +64,11 @@ const Home = () => {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
-        <div
-          style={{
-            borderRadius: "50%",
-            background: "white",
-            color: "#0B0D17",
-            width: "7rem",
-            height: "7rem",
-            padding: ".5rem",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "'Bellefair', serif",
-              fontWeight: 400,
-              fontSize: "1.25rem",
-              color: "#0B0D17",
-              letterSpacing: "1.25px",
-              lineHeight: "23px",
-            }}
-          >
-            EXPLORE
-          </p>
+        <div className="explore-div">
+          <p>EXPLORE</p>
         </div>
       </div>
     </div>
   );
 };
-export default Home;
+export default HomeMobile;
